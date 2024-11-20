@@ -118,3 +118,10 @@ for epoch in range(5):  # Example with 5 epochs
         optimizer.step()
 
     print(f"Epoch {epoch + 1}/5 | Loss: {loss.item()}")
+
+# Save the trained UNet and LabelEmbedding models
+torch.save(unet.state_dict(), "unet_model.pth")
+torch.save(label_embed.state_dict(), "label_embed_model.pth")
+
+print("Models saved successfully!")
+
